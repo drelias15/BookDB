@@ -1,14 +1,24 @@
 public class SKU {
-    private String sku;
-    private Book book;
+    private String skuno;
 
-    public SKU(String sku, Book book) {
-        this.sku = sku;
-        this.book = book;
+    public SKU() {
+    }
+
+    public SKU(String skuno) {
+        this.skuno = skuno;
+    }
+
+    public String getSkuno() {
+        return skuno;
+    }
+
+    public void setSkuno(String skuno) {
+        this.skuno = skuno;
     }
 
     @Override
     public String toString() {
-        return sku + "\t" + book;
+        return skuno;
     }
 }
+

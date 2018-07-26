@@ -1,15 +1,25 @@
 public class Book {
+
     private String title;
     private String author;
     private String description;
     private double price;
+    private SKU sku;
 
-
-    public Book(String title, String author, String description, double price) {
+    public Book(String title, String author, String description, double price, SKU sku) {
         this.title = title;
         this.author = author;
         this.description = description;
         this.price = price;
+        this.sku = sku;
+    }
+
+    public SKU getSku() {
+        return sku;
+    }
+
+    public void setSku(SKU sku) {
+        this.sku = sku;
     }
 
     public String getTitle() {
@@ -46,6 +56,10 @@ public class Book {
 
     @Override
     public String toString() {
-        return title + "\t\t" + author + "\t\t" + description + "\t\t" + price + "\n";
+        return sku + "\t\t" + title + "\t\t" + author + "\t\t" + description + "\t\t" + price + "\t\t";
     }
+
+public String getDisplayText(){
+        return author + title + description;
+}
 }
